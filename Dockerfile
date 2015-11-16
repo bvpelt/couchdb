@@ -2,8 +2,9 @@ FROM fedora:23
 MAINTAINER dockerpinguin <bart.vanpelt@gmail.com>
 
 RUN  dnf -y update && \
-	dnf -y install couchdb && \
-	dnf clean all
+	 dnf clean all
+RUN  dnf -y install couchdb && \
+	 dnf clean all
 
 RUN  sed -e 's/^bind_address = .*$/bind_address = 0.0.0.0/' -i /etc/couchdb/default.ini
 

@@ -13,4 +13,4 @@ docker run -d \
     -e COUCHDB_PASSWORD=$passwd \
     -e COUCHDB_DBNAME=$dbname \
     -v /tmp/couchdb:/data \
-    couchdb
+    dockerpinguin/couchdb:v1
